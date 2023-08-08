@@ -6,16 +6,9 @@ export function ChartDataProviderIncome() {
     labels: [],
     datasets: [
       {
-        label: 'Rs',
+        label: 'Income Rs',
         data: [],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-        ],
+        backgroundColor: ['#C8E4B2', '#9ED2BE', '#CECE5A'],
         borderColor: [
           'rgba(255, 99, 132, 1)',
           'rgba(54, 162, 235, 1)',
@@ -45,16 +38,17 @@ export function ChartDataProviderIncome() {
 
   return data;
 }
+
 export function ChartDataProviderExpense() {
   let data = {
     labels: [],
     datasets: [
       {
-        label: 'Rs',
+        label: 'Expense Rs',
         data: [],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
+          'red',
+          'green',
           'rgba(255, 206, 86, 0.2)',
           'rgba(75, 192, 192, 0.2)',
           'rgba(153, 102, 255, 0.2)',

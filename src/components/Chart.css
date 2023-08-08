@@ -1,0 +1,19 @@
+.income-chart-container {
+  height: 250px;
+  width: 250px;
+}
+
+.expense-chart-container {
+  height: 165px;
+  width: 165px;
+  position: absolute;
+  translate: 25.3% -125.6%;
+}
+
+.container {
+  max-width: 250px;
+  min-width: 250px;
+  max-height: 250px;
+  min-height: 250px;
+  padding: 25px;
+}

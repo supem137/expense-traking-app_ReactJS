@@ -1,7 +1,8 @@
 import { useRef, useContext } from 'react';
-
 import { globalContext } from '../helper/Context';
 import useValidation from '../components/useValidation';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 function AddIncomePage() {
   const { setAmount, setDisc, balanceDispatch, listDispatch } =
@@ -24,9 +25,22 @@ function AddIncomePage() {
 
   return (
     <>
-      <input type="number" placeholder="Amount" ref={amountRef} />
-      <input type="text" placeholder="Description" ref={discRef} />
-      <button onClick={IncomeBtnClickListner}>Income</button>
+      <TextField
+        id="filled-basic"
+        label="Enter the Amount"
+        variant="filled"
+        inputRef={amountRef}
+      />
+      <TextField
+        id="filled-basic"
+        label="Enter the Ducription"
+        variant="filled"
+        inputRef={discRef}
+      />
+
+      <Button variant="contained" onClick={IncomeBtnClickListner}>
+        Add Income
+      </Button>
     </>
   );
 }

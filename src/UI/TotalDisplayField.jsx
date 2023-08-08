@@ -1,7 +1,20 @@
+import TextField from '@mui/material/TextField';
+
 function TotalDisplayField({ balance }) {
   return (
     <div>
-      <input type="text" disabled placeholder="Total Amount" value={balance} />
+      <TextField
+        id="filled-read-only-input"
+        label="Total Amount"
+        InputProps={{
+          readOnly: true,
+        }}
+        variant="filled"
+        value={balance}
+        sx={{
+          width: '300px',
+        }}
+      />
     </div>
   );
 }

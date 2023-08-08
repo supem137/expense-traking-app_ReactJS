@@ -8,13 +8,35 @@ import {
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function Chart() {
+  const optionsIncome = {
+    cutout: '70%',
+    plugins: {
+      tooltip: {
+        enabled: true, // Enable tooltips on hover
+      },
+      legend: {
+        display: false, // Hide the legend (labels)
+      },
+    },
+  };
+  const optionsExpense = {
+    cutout: '40%',
+    plugins: {
+      tooltip: {
+        enabled: true, // Enable tooltips on hover
+      },
+      legend: {
+        display: false, // Hide the legend (labels)
+      },
+    },
+  };
   return (
-    <div>
-      <div style={{ width: '300px', height: '300px' }}>
-        <Doughnut data={ChartDataProviderIncome()} />
+    <div className="container">
+      <div className="income-chart-container">
+        <Doughnut data={ChartDataProviderIncome()} options={optionsIncome} />
       </div>
-      <div style={{ width: '300px', height: '300px' }}>
-        <Doughnut data={ChartDataProviderExpense()} />
+      <div className="expense-chart-container">
+        <Doughnut data={ChartDataProviderExpense()} options={optionsExpense} />
       </div>
     </div>
   );
