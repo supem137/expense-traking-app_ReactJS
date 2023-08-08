@@ -1,9 +1,9 @@
-.income-chart-container {
+.income_chart_container {
   height: 250px;
   width: 250px;
 }
 
-.expense-chart-container {
+.expense_chart_container {
   height: 165px;
   width: 165px;
   position: absolute;

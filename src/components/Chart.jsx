@@ -5,6 +5,8 @@ import {
   ChartDataProviderIncome,
 } from './ChartDataProvider';
 
+import styles from './Chart.module.css';
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function Chart() {
@@ -31,11 +33,11 @@ function Chart() {
     },
   };
   return (
-    <div className="container">
-      <div className="income-chart-container">
+    <div className={styles.container}>
+      <div className={styles.income_chart_container}>
         <Doughnut data={ChartDataProviderIncome()} options={optionsIncome} />
       </div>
-      <div className="expense-chart-container">
+      <div className={styles.expense_chart_container}>
         <Doughnut data={ChartDataProviderExpense()} options={optionsExpense} />
       </div>
     </div>

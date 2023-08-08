@@ -1,0 +1,14 @@
+.main_container {
+  background-color: #f9f9f9;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: auto;
+  min-height: 506px;
+  position: absolute;
+  translate: -50% -50%;
+  left: 50%;
+  top: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #444444;
+}

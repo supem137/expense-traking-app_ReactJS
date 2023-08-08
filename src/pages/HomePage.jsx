@@ -3,7 +3,7 @@ import TotalDisplayField from '../UI/TotalDisplayField';
 import { useNavigate } from 'react-router-dom';
 import { globalContext } from '../helper/Context';
 import Chart from '../components/Chart';
-import './HomePage.css';
+import styles from './HomePage.module.css';
 //MUI Component Import
 import Button from '@mui/material/Button';
 import ListAccordion from '../UI/ListAccordion';
@@ -13,11 +13,11 @@ function HomePage() {
   const navigate = useNavigate();
 
   return (
-    <div className="main-container">
+    <div className={styles.main_container}>
       <Chart />
       <TotalDisplayField balance={balance} />
 
-      <div className="button-container">
+      <div className={styles.button_container}>
         <Button
           variant="outlined"
           style={{

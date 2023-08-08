@@ -1,4 +1,5 @@
 import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
 
 function TotalDisplayField({ balance }) {
   return (
@@ -8,6 +9,7 @@ function TotalDisplayField({ balance }) {
         label="Total Amount"
         InputProps={{
           readOnly: true,
+          startAdornment: <InputAdornment position="start">$</InputAdornment>,
         }}
         variant="filled"
         value={balance}

@@ -8,7 +8,14 @@ export function ChartDataProviderIncome() {
       {
         label: 'Income Rs',
         data: [],
-        backgroundColor: ['#C8E4B2', '#9ED2BE', '#CECE5A'],
+        backgroundColor: [
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+        ],
         borderColor: [
           'rgba(255, 99, 132, 1)',
           'rgba(54, 162, 235, 1)',
@@ -24,7 +31,7 @@ export function ChartDataProviderIncome() {
   const { list } = useContext(globalContext);
 
   let labelData = [];
-  let amountDataIncome = [];
+  let amountDataIncome = [list.transactions > [] ? [] : [1]];
 
   list.transactions.filter((ele) => {
     if (ele.type === 'income') {
@@ -47,8 +54,8 @@ export function ChartDataProviderExpense() {
         label: 'Expense Rs',
         data: [],
         backgroundColor: [
-          'red',
-          'green',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
           'rgba(255, 206, 86, 0.2)',
           'rgba(75, 192, 192, 0.2)',
           'rgba(153, 102, 255, 0.2)',
@@ -69,7 +76,7 @@ export function ChartDataProviderExpense() {
   const { list } = useContext(globalContext);
 
   let labelData = [];
-  let amountDataExpense = [];
+  let amountDataExpense = [list.transactions > [] ? [] : [1]];
 
   list.transactions.filter((ele) => {
     if (ele.type === 'expense') {

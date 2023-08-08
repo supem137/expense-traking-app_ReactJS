@@ -1,0 +1,10 @@
+.transaction_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Add margin between each transaction */
+}
+
+.transaction_info {
+  flex: 1; /* Expand to fill available space */
+}
